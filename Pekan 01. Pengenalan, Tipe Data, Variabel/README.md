@@ -8,15 +8,15 @@
 
 ## Daftar Isi
 
-1A. Instalasi Python
+[1A. Instalasi Python](https://github.com/Quanta2018/DDP0Quanta/tree/master/Pekan%2001.%20Pengenalan%2C%20Tipe%20Data%2C%20Variabel#1a-instalasi-python)
 
-1B. Mengenal IDLE dan Shell
+[1B. Mengenal IDLE dan Shell](https://github.com/Quanta2018/DDP0Quanta/tree/master/Pekan%2001.%20Pengenalan%2C%20Tipe%20Data%2C%20Variabel#1b-mengenal-idle-dan-shell)
 
-1C. Tipe Data
+[1C. Tipe Data](https://github.com/Quanta2018/DDP0Quanta/tree/master/Pekan%2001.%20Pengenalan%2C%20Tipe%20Data%2C%20Variabel#1c-tipe-data)
 
-1D. Variabel
+[1D. Variabel](https://github.com/Quanta2018/DDP0Quanta/tree/master/Pekan%2001.%20Pengenalan%2C%20Tipe%20Data%2C%20Variabel#1d-variabel)
 
-1L. Latihan
+1L. Latihan (*under construction*)
 
 
 
