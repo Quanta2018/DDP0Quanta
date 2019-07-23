@@ -2,7 +2,7 @@
 
 **Dasar-Dasar Pemrograman 0** | Penulis: Harnindyto Wicaksana, Rafi Muhammad Daffa
 
-*Diperbarui pada 21 Juli 2019*
+*Diperbarui pada 22 Juli 2019*
 
 
 
@@ -16,7 +16,7 @@
 
 [1D. Variabel](https://github.com/Quanta2018/DDP0Quanta/tree/master/Pekan%2001.%20Pengenalan%2C%20Tipe%20Data%2C%20Variabel#1d-variabel)
 
-1L. Latihan (*under construction*)
+[1L. Latihan](https://github.com/Quanta2018/DDP0Quanta/tree/master/Pekan%2001.%20Pengenalan%2C%20Tipe%20Data%2C%20Variabel/Latihan)
 
 
 
@@ -296,11 +296,17 @@ businessbusinessbusiness
 Selain itu, String juga memiliki beberapa metode (perlakuan yang dapat diberikan terhadap suatu String) sebagai berikut:
 
 `len(var)` -> mengembalikan panjang String
+
 `var.find()` -> mengembalikan indeks dari nilai yang dicari
+
 `var.isdigit()` -> mengembalikan True jika semuanya adalah angka
+
 `var.upper()` -> mengembalikan String yang semuanya kapital
+
 `var.lower()` -> mengembalikan String yang semuanya bukan kapital
+
 `var.isupper()` -> mengembalikan True jika semuanya kapital
+
 `var.islower()` -> mengembalikan True jika semuanya bukan kapital
 
 > **Catatan**:
