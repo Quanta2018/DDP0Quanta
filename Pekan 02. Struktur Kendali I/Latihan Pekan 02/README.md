@@ -70,13 +70,11 @@ Buatlah sebuah program yang dapat menangani masalah-masalah ini:
    
 
    Rumus Diskriminan:
-   $$
-   \begin{align*}
-   D=b^2 - 4ac
-   \end{align*}
-   $$
+   
+   ![](assets/Screenshot_3.png)
+   
    D > 0: Mempunyai dua akar unik
-
+   
    D = 0: Mempunyai akar kembar
 
    D < 0: Tidak mempunyai akar real
@@ -84,13 +82,8 @@ Buatlah sebuah program yang dapat menangani masalah-masalah ini:
    
 
    Rumus Akar:
-   $$
-   \begin{align*}
-   x_{1,2}= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-   \end{align*}
-   $$
 
-
+   ![](assets/Screenshot_4.png)
 
 ## L3. Latihan Pemrograman
 
