@@ -178,3 +178,282 @@ Cara kerja *Luhn Algorithm* pada nomor ISBN-13 adalah:
 7. Apabila hasil perhitungan ini sama dengan digit terakhir dari nomor ISBN-13 tersebut, maka nomor ISBN-13 tersebut *valid*.
 
 Buatlah sebuah program yang dapat menerima nomor ISBN 13 digit (asumsikan seperti itu) dan cek apakah nomor ISBN-13 tersebut *valid* atau tidak.
+
+#### 3. (D - \*\*\*) Pembuatan Akun
+
+Prerequisites:
+
+1. Basic user input knowledge
+2. Control Structures
+3. For and While loops
+4. Lists
+
+*Jika beberapa materi tersebut belum dipelajari maka kerjakan soal ini dengan melewati subtask yang diperlukan. Baca keterangan di akhir soal untuk penjelasan lebih lanjut.*
+
+Saat kalian diterima di Universitas Indonesia, kalian diberikan sebuah email yang dapat digunakan untuk masuk ke website yang terafiliasi dengan UI. Dek Depe, seorang mahasiswa baru Fasilkom, terpukau dan berniat membuat sistem dia sendiri.
+
+Namun karena ilmu dia belum mencukupi Ia hanya akan meminta username, email, dan password. Tetapi ada syaratnya, username harus unik dan belum pernah digunakan sebelumnya, email harus mengandung simbol @ dan . serta password harus memiliki panjang diantara 8-12. Apabila semua syarat sudah terpenuhi maka tiga atribut tersebut akan disimpan agar dapat dipanggil kembali suatu saat.
+
+Karena kalian teman Dek Depe yang baik hati dan tidak sombong, bantulah Dek Depe mewujudkan keinginannya.
+
+Di bawah ini adalah contoh kerja program yang diberikan oleh Dek Depe.
+
+
+
+**Default Output**
+
+```python
+Halo! Masukkan angka yang bersesuaian dengan pilihan dibawah ini,
+(0) Registrasi akun
+(1) Login akun
+Pilihan Anda: 
+```
+
+
+
+**Registrasi**
+
+*Input*:
+
+```
+0
+```
+
+*Output*:
+
+```python
+Masukkan username yang unik (belum pernah digunakan sebelumnya).
+Username:
+```
+
+*Input*:
+
+```python
+SpamEgg
+```
+
+*Output* apabila username sudah pernah digunakan sebelumnya:
+
+```python
+Maaf, username tersebut sudah pernah digunakan. Silakan gunakan username lain.
+Username:
+```
+
+*Output* apabila username valid (belum pernah digunakan user lain):
+
+```python
+Username dapat digunakan! Silakan masukkan e-mail Anda.
+E-mail:
+```
+
+*Input*:
+
+```python
+SpamEgg@SpamEgg.SpamEgg
+```
+
+*Output* apabila e-mail tidak valid (tidak mengandung @ dan .):
+
+```python
+Tolong gunakan e-mail yang valid.
+E-mail:
+```
+
+*Output* apabila e-mail valid (mengandung @ dan .):
+
+```python
+E-mail valid! Langkah terakhir adalah memasukkan password yang akan digunakan.
+Password:
+```
+
+*Input*:
+
+```python
+
+```
+
+**NOTE:** *Best practice* untuk input sebuah password adalah dengan tidak menunjukkan karakternya atau mengubah setiap karakternya menjadi **\***. Namun apabila hanya menggunakan *input()* diperbolehkan. Akan ada keterangan lanjutan di akhir soal!
+
+*Output* apabila password tidak memenuhi syarat di antara 8-12 karakter:
+
+```python
+Maaf, password yang Anda masukkan terlalu lemah. Gunakan password lain.
+Password:
+```
+
+*Output* apabila password memenuhi syarat di antara 8-12 karakter:
+
+```python
+Terima kasih telah meregistrasi di program SpamEgg! Akun Anda telah disimpan dan dapat diakses kapanpun.
+```
+
+
+
+**Login**
+
+*Input* alternatif pada *Default Output*:
+
+```python
+1
+```
+
+*Output*:
+
+```python
+Untuk mengakses akun Anda, masukkan kredensial yang diperlukan.
+Username:
+```
+
+*Output* apabila username yang dimasukkan tidak terdaftar:
+
+```python
+Username tidak dapat ditemukan.
+Username:
+```
+
+*Output* apabila username terdaftar:
+
+```python
+Masukkan password untuk akun Anda.
+Password:
+```
+
+*Output* apabila password salah:
+
+```python
+Password salah!
+Password:
+```
+
+*Output* apabila password benar:
+
+```python
+Username: SpamEgg
+E-mail: SpamEgg@SpamEgg.SpamEgg
+```
+
+
+
+**Important Notes**
+
+1. Apabila belum mempelajari list maka subtask login tidak perlu dikerjakan.
+
+2. Untuk mengubah password menjadi invisible dapat di search mengenai fungsi *getpass()* untuk menggantikan *input()*. Contohnya seperti di bawah ini:
+
+   ```python
+   import getpass
+   
+   p = getpass.getpass("Password: ")
+   ```
+
+3. Untuk membersihkan layar terminal/command prompt dapat menggunakan fungsi os.system('cls'). Contohnya:
+
+   ```python
+   import os
+   
+   os.system('cls')
+   ```
+
+   Untuk *operating system* linux hanya perlu mengganti 'cls' menjadi 'clear'.
+
+#### 4. (D - \*\*) Menghitung IPK
+
+Setelah melihat kakak-kakak tingkat mempermasalahkan IPK mereka, Dek Depe jadi penasaran dengan cara menghitung nilai tersebut. Namun karena Dek Depe sangat malas, Ia ingin membuat program untuk melakukan perhitungan tersebut. Sayangnya, saking malasnya Dek Depe Ia belum membaca materi yang diperlukan untuk membuat program tersebut. Bantulah Dek Depe menyelesaikan programnya!
+
+Penghitungan IPK dapat dilakukan dengan rumus:
+$$
+IPK = \frac{(IPK^1 * SKS^1) + (IP * SKS)}{SKS^1+SKS}\\
+IPK^1 = IPK\,semester\,sebelumnya\\
+SKS^1 = SKS\,total\,semester\,sebelumnya\\
+IP = Nilai\,IP\,semester\,ini\\
+SKS = Jumlah\,SKS\,semester\,ini\\
+$$
+(IP * SKS) = Dapat dihitung dengan mencari bobot tiap mata kuliah dan mengalikannya dengan jumlah SKS mata kuliah tersebut lalu menjumlahkan hasil dari semua mata kuliah yang diambil pada semester ini.
+
+
+
+*Output*:
+
+```python
+Berapa IPK semester sebelumnya:
+```
+
+*Input*:
+
+```python
+3.91
+```
+
+*Output*:
+
+```python
+Berapa SKS total yang sudah diambil semester sebelumnya:
+```
+
+*Input*:
+
+```python
+19
+```
+
+*Output*:
+
+```python
+Berapa mata kuliah yang diambil semester ini:
+```
+
+*Input*:
+
+```python
+23
+```
+
+*Output* (meminta nilai dan jumlah SKS sebanyak mata kuliah yang diambil semester ini **dipisahkan oleh spasi**):
+
+```python
+Masukkan nilai dan jumlah sks (dipisahkan oleh spasi):
+```
+
+*Input*:
+
+```python
+87.5 4
+```
+
+*Output*:
+
+```python
+IPK terbaru Anda adalah ...
+```
+
+
+
+**Subtask**
+
+Tampilkan berapa banyak nilai A/B/C/dst. yang didapat oleh user.
+
+
+
+**Important Notes**
+
+1. Untuk nilai di bawah C tidak akan masuk ke perhitungan IPK
+2. Input nilai kosong akan diingatkan untuk mengisi kembali nilai dan SKS.
+3. Apabila user mendapat IPK lebih dari 3.5 maka berikan pesan 'Selamat Anda Cumlaude!'.
+4. Perhitungan mungkin sedikit tidak akurat dengan offset sekitar 0.04-0.08
+
+
+
+Di bawah ini adalah tabel acuan nilai huruf, angka, serta bobotnya:
+
+| Nilai Huruf | Nilai Angka | Bobot |
+| :---------: | :---------: | :---: |
+|      A      |   85-100    | 4.00  |
+|     A-      |  80-84.99   | 3.70  |
+|     B+      |  75-79.99   | 3.30  |
+|      B      |  70-74.99   | 3.00  |
+|     B-      |  65-69.99   | 2.70  |
+|     C+      |  60-64.99   | 2.30  |
+|      C      |  55-59.99   | 2.00  |
+|      D      |  40-54-99   | 1.00  |
+|      E      |   0-39.99   | 0.00  |
+
