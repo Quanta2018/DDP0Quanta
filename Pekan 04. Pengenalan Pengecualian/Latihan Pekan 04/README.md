@@ -1,4 +1,4 @@
-# Struktur Kendali II
+# Latihan Pekan 4
 
 **Dasar-Dasar Pemrograman 0** | Penulis: TBA
 
