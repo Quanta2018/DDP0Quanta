@@ -173,7 +173,7 @@ Cara kerja *Luhn Algorithm* pada nomor ISBN-13 adalah:
 
    Contoh pada Buku 2: 10 - 5 = 5
 
-   (Apabila hasilnya 10, maka *check digit*-nya adalah X)
+   (Apabila hasilnya 10, maka *check digit*-nya adalah 0)
 
 7. Apabila hasil perhitungan ini sama dengan digit terakhir dari nomor ISBN-13 tersebut, maka nomor ISBN-13 tersebut *valid*.
 
@@ -361,16 +361,10 @@ E-mail: SpamEgg@SpamEgg.SpamEgg
 Setelah melihat kakak-kakak tingkat mempermasalahkan IPK mereka, Dek Depe jadi penasaran dengan cara menghitung nilai tersebut. Namun karena Dek Depe sangat malas, Ia ingin membuat program untuk melakukan perhitungan tersebut. Sayangnya, saking malasnya Dek Depe Ia belum membaca materi yang diperlukan untuk membuat program tersebut. Bantulah Dek Depe menyelesaikan programnya!
 
 Penghitungan IPK dapat dilakukan dengan rumus:
-$$
-IPK = \frac{(IPK^1 * SKS^1) + (IP * SKS)}{SKS^1+SKS}\\
-IPK^1 = IPK\,semester\,sebelumnya\\
-SKS^1 = SKS\,total\,semester\,sebelumnya\\
-IP = Nilai\,IP\,semester\,ini\\
-SKS = Jumlah\,SKS\,semester\,ini\\
-$$
+
 (IP * SKS) = Dapat dihitung dengan mencari bobot tiap mata kuliah dan mengalikannya dengan jumlah SKS mata kuliah tersebut lalu menjumlahkan hasil dari semua mata kuliah yang diambil pada semester ini.
 
-
+![](assets/Screenshot_5.png)
 
 *Output*:
 
