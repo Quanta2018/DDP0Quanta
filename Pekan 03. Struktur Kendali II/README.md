@@ -74,7 +74,7 @@ for nama in teman_kenalan:
 	print(nama)
 ~~~
 
-![](assets/Diagram for-1564330897979.png)
+![](assets/Diagram for.png)
 
 Sebagaimana dapat diamati dari grafik di atas, setiap iterasi mengubah konten dari variabel <code>nama</code> sesuai dengan posisi dari urutan yang ditempuh. Pada perjalanan iterasi pertama, variabel <code>nama</code> akan menggunakan data pada indeks paling awal (0); pada perjalanan iterasi kedua, variabel <code>nama</code> akan menggunakan data pada indeks setelahnya (1); dan seterusnya.
 
