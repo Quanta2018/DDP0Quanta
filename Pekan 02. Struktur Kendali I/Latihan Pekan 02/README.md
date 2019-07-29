@@ -362,9 +362,7 @@ Setelah melihat kakak-kakak tingkat mempermasalahkan IPK mereka, Dek Depe jadi p
 
 Penghitungan IPK dapat dilakukan dengan rumus:
 
-(IP * SKS) = Dapat dihitung dengan mencari bobot tiap mata kuliah dan mengalikannya dengan jumlah SKS mata kuliah tersebut lalu menjumlahkan hasil dari semua mata kuliah yang diambil pada semester ini.
-
-![](assets/Screenshot_5.png)
+![](assets/IPK Equation.png)
 
 *Output*:
 
