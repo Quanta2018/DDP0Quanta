@@ -362,7 +362,7 @@ Setelah melihat kakak-kakak tingkat mempermasalahkan IPK mereka, Dek Depe jadi p
 
 Penghitungan IPK dapat dilakukan dengan rumus:
 
-![](assets/IPK Equation.png)
+![](assets/IPK_Equation.png)
 
 *Output*:
 
