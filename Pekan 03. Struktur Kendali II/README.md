@@ -474,10 +474,10 @@ cetak()
 
 ## 3C. Konsep *Mutability* dan *Parameter Passing*
 
-Dalam proses pembangunan
+Dalam proses pembangunan.
 
 
 
 ## 3D. <code>return</code>, <code>break</code>, <code>continue</code>, dan <code>pass</code>
 
-Dalam proses pembangunan
+Dalam proses pembangunan.
