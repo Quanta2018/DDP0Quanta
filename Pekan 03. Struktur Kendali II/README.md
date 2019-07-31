@@ -585,7 +585,7 @@ a = 2
 b = 4
 ~~~
 
-![](assets/Untitled Diagram.png)
+![](assets/DM0.png)
 
 Variabel <code>a</code> dan <code>b</code> masing-masing hanya menyimpan alamat dari blok memori yang menampung data angka yang dibuat. Pada grafik di atas, alamat direpresentasikan dengan tanda panah yang menunjuk ke blok memori yang dimaksud. Lalu, misalnya kita ingin membuat nilai <code>a</code> menjadi sama dengan nilai <code>b</code> sebagai berikut:
 
@@ -593,7 +593,7 @@ Variabel <code>a</code> dan <code>b</code> masing-masing hanya menyimpan alamat 
 a = b
 ~~~
 
-![](assets/Untitled Diagram (1).png)
+![](assets/DM1.png)
 
 Yang terjadi adalah alamat yang disimpan oleh <code>a</code> akan diubah menjadi alamat yang disimpan oleh <code>b</code> sehingga akan menunjuk ke objek angka yang sama.
 
@@ -610,7 +610,7 @@ a += 2
 
 Meskipun <code>a</code> dan <code>b</code> menunjuk ke objek yang sama, karena Integer bersifat *immutable*, yang terjadi adalah akan terbentuk objek baru yang merupakan hasil dari penjumlahan nilai a sebelumnya (2) dengan 2:
 
-![](assets/Untitled Diagram (2)-1564563935905.png)
+![](assets/DM2.png)
 
 Pada grafik di atas, terlihat bahwa nilai <code>b</code> tidak akan berubah meskipun objek yang ditunjuk pada awalnya sama. Lain halnya dengan perubahan yang dikenakan pada tipe data *mutable*:
 
@@ -622,11 +622,11 @@ a.append("2")
 
 Sebelum dikenakan <code>append</code>:
 
-![](assets/Untitled Diagram (3).png)
+![](assets/DM4.png)
 
 Setelah dikenakan <code>append</code>:
 
-![](assets/Untitled Diagram (4).png)
+![](assets/DM5.png)
 
 Untuk tipe data *mutable*, perubahan yang dikenakan tidak akan membuat objek baru, namun akan mengubah objeknya itu sendiri. Sehingga, meskipun kita memodifikasi variabel <code>a</code> saja, variabel <code>b</code> juga turut berubah.
 
@@ -640,11 +640,11 @@ a = ["2"]
 
 Sebelum diberikan objek baru:
 
-![](assets/Untitled Diagram (5).png)
+![](assets/DM6.png)
 
 Setelah diberikan objek baru:
 
-![](assets/Untitled Diagram (6).png)
+![](assets/DM7.png)
 
 
 
