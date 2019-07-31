@@ -269,6 +269,106 @@ while pemakaian + daftar_daya[indeks] <= 3500:
 
 
 
+### Penggunaan <code>else</code> dalam Pola Perulangan
+
+Pola perulangan juga dapat diikuti oleh pernyataan <code>else</code> yang memiliki blok program di bawahnya. Program akan memasuki blok <code>else</code> apabila pola perulangan berjalan secara normal (tidak diberhentikan secara paksa). Kondisi yang menyebabkan masuknya <code>else</code> adalah:
+
+1. Untuk <code>for</code>, urutan datanya sudah habis terpakai.
+2. Untuk <code>while</code>, kondisinya sudah tidak memenuhi syarat.
+
+Struktur pola perulangan yang mengandung <code>else</code> adalah sebagai berikut:
+
+~~~python
+for i in koleksi_data:
+    # Blok program untuk setiap iterasi
+else:
+    # Blok program yang jalan ketika for selesai tanpa pemberhentian paksa
+~~~
+
+~~~python
+while suatu_kondisi:
+    # Blok program untuk setiap iterasi
+else:
+    # Blok program yang jalan ketika while selesai tanpa pemberhentian paksa
+~~~
+
+Contoh:
+
+~~~python
+def cari_dyto(list_nama):
+    for nama in list_nama:
+        if nama == "Dyto":
+            return True
+    else:
+        return False
+daftar = ["Azis", "Dzikra", "Yoga", "Cinoy", "Ray", "Ali", "Meldi"]
+print(cari_dyto(daftar))
+~~~
+
+Hasil:
+
+~~~
+False
+~~~
+
+Penjelasan:
+
+1. Pemanggilan fungsi <code>cari_dyto</code> akan menjalankan sebuah iterasi yang mengecek satu per satu elemen dari List apakah sama dengan Dyto atau tidak.
+2. Karena tidak ada yang sama dengan Dyto, maka kata kunci <code>return</code> tidak akan dijalankan sehingga <code>for</code> berhenti sempurna dengan habisnya koleksi data.
+3. Karena <code>for</code> berhenti sempurna, blok <code>else</code> dijalankan dengan mengembalikan False ke pemanggilnya.
+
+
+
+### Pola Perulangan Bersarang
+
+Dalam membuat pola perulangan, mungkin saja bahwa pola perulangan tersebut menjalankan suatu pola perulangan lain di dalamnya. Pola perulangan seperti ini disebut pola perulangan bersarang (*nested loop*). Sebagai contoh, mari kita ambil contoh program yang memeragakan cara kerja jam.
+
+> **00:00:00**
+
+Kita mengetahui bahwa bagian detik dari jam tersebut akan berubah 1x setiap detiknya. Kemudian, saat detik tersebut selesai melakukan iterasi (dari 59 kembali ke 00), bagian menitnya turut bertambah 1. Begitu pula dengan bagian jamnya, di mana saat bagian menitnya selesai melakukan iterasi (dari 59 kembali ke 00), bagian jamnya turut bertambah 1. Apabila masing-masing dari bagian jam, menit, dan detik tersebut dijadikan sebuah variabel, maka perubahan yang terjadi adalah sebagai berikut:
+
+| Jam   | 00   |      |      |      |      |      |      |      |      |      |      |      | 01   |
+| ----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Menit | 00   |      |      |      |      | 01   |      |      |      |      | ...  | ...  | 00   |
+| Detik | 00   | 01   | ...  | 58   | 59   | 00   | 01   | ...  | 58   | 59   | ...  | ...  | 00   |
+
+Dalam Python, struktur seperti ini dapat diimplementasikan dengan tiga tingkatan pola perulangan <code>for</code> sebagai berikut:
+
+~~~python
+for jam in range(24):
+	for menit in range(60):
+		for detik in range(60):
+			print(jam,":",menit,":",detik,":")
+~~~
+
+Penjelasan:
+
+1. Anggaplah setiap blok <code>for</code> yang ada sebagai blok program tersendiri. Sehingga, ada blok jam, menit, dan detik.
+2. Dengan <code>range</code> 24, berarti blok jam akan dijalankan sebanyak 24 kali yang masing-masing akan memanggil blok menit.
+3. Dengan <code>range</code> 60, berarti blok menit akan dijalankan sebanyak 60 kali yang masing-masing akan memanggil blok detik.
+4. Dengan <code>range</code> 60, berarti blok detik akan dijalankan sebanyak 60 kali yang masing-masing akan memanggil fungsi <code>print</code>.
+5. Suatu pola perulangan baru bisa melanjutkan perulangannya setelah blok di dalamnya selesai dilakukan. Berarti, blok menit baru akan melanjutkan ke perulangan selanjutnya setelah blok detik telah berjalan sebanyak 60 kali. Begitupun dengan jam.
+
+Hasil:
+
+~~~
+0 : 0 : 0
+.....
+0 : 0 : 59
+0 : 1 : 0
+0 : 1 : 1
+.....
+0 : 59 : 59
+1 : 0 : 0
+1 : 0 : 1
+.....
+23 : 59 : 59
+~~~
+
+Kamu juga dapat mengamati proses pola perulangan bersarang pada sistem *rotor* yang merupakan salah satu metode enkripsi dalam sistem Enigma yang pernah digunakan di Perang Dunia ke-2. Situs peraga [ini](http://enigmaco.de/enigma/enigma.html) dapat membantumu dalam mengamatinya. Pada sistem tersebut, setiap kali tombol *keyboard* ditekan, *rotor* paling kanan akan melangkah sejauh 1 langkah. Ketika *rotor* paling kanan tersebut telah berputar kembali ke awal, pergantian kembali ke awal juga akan menarik *rotor* di sebelah kirinya untuk melangkah sejauh 1 langkah. Cara kerja ini mirip dengan jam tadi.
+
+
+
 ## 3B. Fungsi
 
 Pada subbab 2A, kamu telah mempelajari cara untuk mengulangi suatu blok program baik melalui iterasi urutan data maupun dengan kondisi Boolean. Namun, perulangan blok program terjadi langsung sesuai dengan definisi yang dibuat. Contohnya:
@@ -415,7 +515,7 @@ Untuk membuat sebuah *infinite positional argument*, beberapa hal ini harus dipe
 
 1. Argumen ditandai dengan karakter ‘*’ sebelum deklarasi nama argumennya.
 2. Dalam satu fungsi, hanya satu argumen boleh berbentuk *infinite positional argument*.
-3. Posisi argumen diletakkan di akhir.
+3. Tidak boleh ada *positional argument* setelahnya.
 4. Tidak boleh menggunakan *keyword argument*.
 
 #### Nilai *Default*
@@ -474,10 +574,235 @@ cetak()
 
 ## 3C. Konsep *Mutability* dan *Parameter Passing*
 
-Dalam proses pembangunan
+### *Mutability*
+
+Dalam Python, setiap tipe data diperlakukan sama dalam hal penyimpanan apabila diberikan ke suatu variabel. Data akan disimpan pada suatu blok memori terpisah dari variabelnya dan variabel hanya akan menyimpan sebuah alamat ke blok memori di mana data tersebut disimpan. Hal ini berbeda dengan bahasa pemrograman lain, seperti Java, di mana tipe data tertentu disimpan di blok memori yang sama dengan variabelnya.
+
+Sebagai contoh, anggaplah ada dua variabel <code>a</code> dan <code>b</code> seperti berikut:
+
+~~~python
+a = 2
+b = 4
+~~~
+
+![](assets/Untitled Diagram.png)
+
+Variabel <code>a</code> dan <code>b</code> masing-masing hanya menyimpan alamat dari blok memori yang menampung data angka yang dibuat. Pada grafik di atas, alamat direpresentasikan dengan tanda panah yang menunjuk ke blok memori yang dimaksud. Lalu, misalnya kita ingin membuat nilai <code>a</code> menjadi sama dengan nilai <code>b</code> sebagai berikut:
+
+~~~
+a = b
+~~~
+
+![](assets/Untitled Diagram (1).png)
+
+Yang terjadi adalah alamat yang disimpan oleh <code>a</code> akan diubah menjadi alamat yang disimpan oleh <code>b</code> sehingga akan menunjuk ke objek angka yang sama.
+
+Namun, sebagai kompromi terhadap tidak adanya perbedaan konsep penyimpanan data dalam Python, Python menganut sistem *mutability*. Sistem ini menentukan apakah suatu objek bisa diubah di tempat atau tidak. Tipe-tipe data yang ada di Python terbagi menjadi dua jenis berdasarkan sifat *mutability*-nya:
+
+1. *Immutable*: Tipe data yang tidak dapat diubah di tempat, sehingga perubahan yang dikenakan padanya akan menghasilkan objek baru dan data aslinya tidak berubah. Contoh: Integer, Float, Tuple, String.
+2. *Mutable*: Tipe data yang dapat diubah di tempat, sehingga perubahan **tertentu** yang dikenakan padanya akan mengubah objek itu sendiri. Contoh: List.
+
+Misalnya, variabel <code>a</code> dan <code>b</code> tadi menunjuk ke objek Integer 4 yang sama. Kemudian, kita mengubah <code>a</code> dengan operasi matematika sebagai berikut:
+
+~~~python
+a += 2
+~~~
+
+Meskipun <code>a</code> dan <code>b</code> menunjuk ke objek yang sama, karena Integer bersifat *immutable*, yang terjadi adalah akan terbentuk objek baru yang merupakan hasil dari penjumlahan nilai a sebelumnya (2) dengan 2:
+
+![](assets/Untitled Diagram (2)-1564563935905.png)
+
+Pada grafik di atas, terlihat bahwa nilai <code>b</code> tidak akan berubah meskipun objek yang ditunjuk pada awalnya sama. Lain halnya dengan perubahan yang dikenakan pada tipe data *mutable*:
+
+~~~python
+a = ["1"]
+b = a
+a.append("2")
+~~~
+
+Sebelum dikenakan <code>append</code>:
+
+![](assets/Untitled Diagram (3).png)
+
+Setelah dikenakan <code>append</code>:
+
+![](assets/Untitled Diagram (4).png)
+
+Untuk tipe data *mutable*, perubahan yang dikenakan tidak akan membuat objek baru, namun akan mengubah objeknya itu sendiri. Sehingga, meskipun kita memodifikasi variabel <code>a</code> saja, variabel <code>b</code> juga turut berubah.
+
+Namun, apabila kita memberikan suatu objek baru ke suatu variabel, keterkaitan antar-variabelnya akan terputus meskipun tipe datanya *mutable*, misalnya:
+
+~~~python
+a = ["1"]
+b = a
+a = ["2"]
+~~~
+
+Sebelum diberikan objek baru:
+
+![](assets/Untitled Diagram (5).png)
+
+Setelah diberikan objek baru:
+
+![](assets/Untitled Diagram (6).png)
+
+
+
+### *Parameter Passing*
+
+Pada setiap pemanggilan fungsi yang berkaitan dengan argumen-argumen, konsep *mutability* tetap berlaku. Amatilah contoh di bawah ini:
+
+~~~python
+def sebuah_fungsi(argumen):
+	print("argumen =",argumen)
+random_string = "Foo"
+sebuah_fungsi(random_string)
+~~~
+
+Hasil:
+
+~~~
+argumen = Foo
+~~~
+
+Dengan menjadikan <code>random_string</code> sebagai argumen <code>sebuah_fungsi</code>, maka yang terjadi adalah variabel <code>argumen</code> akan diberikan alamat dari blok memori yang disimpan oleh <code>random_string</code>, dalam hal ini adalah objek String "Foo". Perlu dicatat bahwa variabel yang merupakan bagian dari sebuah fungsi, baik yang dijadikan argumen maupun variabel-variabel yang dibuat di dalam fungsi, hanya hidup di dalam fungsi. Sehingga, variabel-variabel tersebut tidak dapat dipanggil dari luar fungsi. Contoh:
+
+~~~python
+def a_function(argumen):
+    an_item = argumen
+a_function("WOW")
+print(argumen)
+print(an_item)
+~~~
+
+Hasil:
+
+~~~
+NameError: name 'argumen' is not defined
+~~~
+
+> **Further Learning**:
+>
+> Konsep variabel dalam fungsi ini merupakan bagian dari pembahasan *namespace* yang merupakan materi Dasar-Dasar Pemrograman 1 dengan nama bab yang sama (*Namespaces*).
+
+Dengan menerapkan konsep *mutability* dalam *parameter passing*, jika data tersebut bersifat *immutable*, maka perubahannya tidak akan sampai ke luar fungsi. Contoh:
+
+~~~python
+def modify_number(num):
+	num += 3
+    print("num =",num)
+my_num = 5
+modify_number(my_num)
+print("my_num =",my_num)
+~~~
+
+Hasil:
+
+~~~
+num = 8
+my_num = 5
+~~~
+
+Sebaliknya, jika data bersifat *mutable*, maka perubahan akan dikenakan baik di dalam maupun di luar fungsi. Contoh:
+
+~~~python
+def modify_list(lst):
+	lst.append("3")
+    print("lst =",lst)
+my_lst = ["1"]
+modify_list(my_lst)
+print("my_lst =",my_lst)
+~~~
+
+Hasil:
+
+~~~
+lst = ['1', '3']
+my_lst = ['1', '3']
+~~~
 
 
 
 ## 3D. <code>return</code>, <code>break</code>, <code>continue</code>, dan <code>pass</code>
 
-Dalam proses pembangunan
+### <code>return</code>
+
+Kata kunci <code>return</code> digunakan dalam sebuah fungsi untuk mengembalikan suatu nilai kepada pemanggil fungsi tersebut. Kata kunci ini juga akan memberhentikan jalannya sebuah fungsi. Sehingga, apabila masih terdapat blok program di bawah <code>return</code> di dalam fungsi tersebut, maka blok program tersebut tidak akan jalan. Contohnya:
+
+~~~python
+def angka_positif(angka):
+    if angka > 0:
+        return True
+    print("Angka bukan positif, ulangi pemanggilan fungsi")
+print(angka_positif(2))
+angka_positif(-1)
+~~~
+
+Pada pemanggilan fungsi <code>angka_positif(2)</code>, fungsi akan mengembalikan nilai Boolean True kepada pemanggilnya, yaitu fungsi <code>print()</code>. Sehingga, akan dicetak nilai yang dikembalikan tadi, yakni True. Fungsi <code>print("Angka bukan positif, ulangi pemanggilan fungsi")</code> tidak dijalankan oleh pemanggilan fungsi <code>angka_positif(2)</code> karena terletak setelah <code>return</code>. Di sisi lain, pemanggilan fungsi <code>angka_positif(-1)</code> akan menjalankan fungsi <code>print("Angka bukan positif, ulangi pemanggilan fungsi")</code> karena blok <code>if</code> yang mengandung <code>return</code> tidak memenuhi syarat, sehingga fungsi berjalan terus sampai selesai.
+
+
+
+### <code>break</code>
+
+Kata kunci <code>break</code> digunakan untuk menghentikan suatu pola perulangan yang sedang berjalan. Dengan adanya <code>break</code>, semua blok setelahnya (termasuk perulangan selanjutnya) tidak akan dilaksanakan. Contoh:
+
+~~~python
+for i in range(5):
+   if(i == 3):
+      break
+   print(i)
+print("program selesai")
+~~~
+
+Hasil:
+
+~~~
+0
+1
+2
+program selesai
+~~~
+
+Penjelasan:
+
+1. Pada saat nilai <code>i</code> 0, 1, dan 2, kondisi <code>if</code> tidak memenuhi syarat sehingga <code>break</code> tidak dijalankan. Iterasi berlanjut.
+2. Saat bertemu dengan nilai <code>i</code> 3, kondisi <code>if</code> memenuhi syarat dan akan bertemu dengan <code>break</code>. Hal ini akan menyebabkan pola perulangan berhenti tanpa sempat mencetak nilai 3.
+3. Program berlanjut dengan mencetak "program selesai".
+
+
+
+### <code>continue</code>
+
+Kata kunci <code>continue</code> digunakan untuk memaksa Python untuk berpindah ke perulangan selanjutnya. Dengan adanya <code>continue</code>, semua blok setelahnya **pada perulangan tersebut** tidak akan dijalankan. Program akan segera melanjutkan ke tahapan iterasi selanjutnya. Contoh:
+
+~~~python
+word = "FASILKOM UI"
+for i in word:
+   if(i == "I"):
+      continue
+   print(i, end=" ")
+~~~
+
+Hasil:
+
+~~~
+FASLKOM U
+~~~
+
+
+
+### <code>pass</code>
+
+Kata kunci <code>pass</code> berfungsi sebagai kode kosong di mana kata kunci ini tidak melakukan apa-apa. Kata kunci ini umumnya digunakan sebagai kode *dummy* untuk sebuah kelas atau fungsi yang belum diimplementasikan. Hal ini berguna karena ketika kamu sudah mengetikkan <code>def</code> sebuah fungsi dan argumennya, kamu harus melanjutkan definisinya sampai minimal terdapat satu baris program di dalamnya. Karena <code>pass</code> juga merupakan kode yang tidak melakukan apa-apa, kamu sudah memenuhi syarat untuk membuat sebuah fungsi meskipun tidak melakukan apa-apa. Coba bandingkan perjalanan kedua program ini:
+
+~~~python
+def function_to_be_defined_later():
+~~~
+
+~~~python
+def function_to_be_defined_later():
+	pass
+~~~
+
+Program pertama akan menghasilkan *error* karena fungsi yang sudah dideklarasikan harus memiliki setidaknya satu baris program. Sebaliknya, program kedua akan berjalan baik-baik saja.
+
