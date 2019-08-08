@@ -309,8 +309,8 @@ Hasil:
 
 ~~~
 Jarak Manggarai - Bogor: 44.924 km
-Index Bogor - Manggarai: 44.924 km
-Index Cikarang - Jakarta Kota: None km
+Jarak Bogor - Manggarai: 44.924 km
+Jarak Cikarang - Jakarta Kota: None km
 ~~~
 
 Catatan:
