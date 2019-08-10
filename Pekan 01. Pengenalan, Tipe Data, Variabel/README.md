@@ -243,7 +243,7 @@ text_var[x:y:z]
 
 > x: Indeks mulai untuk pemotongan (inklusif - default 0)
 >
-> y: Indeks akhir untuk pemotongan (eksklusif - default -1)
+> y: Indeks akhir untuk pemotongan (eksklusif - default panjang dari string tersebut)
 >
 > z: *Stepping* (Jarak longkapan dalam pemotongan - default 1 / tidak ada pelongkapan)
 
