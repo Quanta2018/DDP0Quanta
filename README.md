@@ -1,6 +1,32 @@
 # Dasar-Dasar Pemrograman 0 (DDP0)
 
-Selamat datang di *repository* GitHub "Dasar-Dasar Pemrograman 0". *Repository* ini digunakan sebagai wadah penyimpanan materi-materi tentang dasar-dasar pemrograman dengan menggunakan bahasa pemrograman Python. Materi yang ada pada *repository* ini disusun sebagai penunjang kegiatan dengan nama serupa yang diadakan oleh Quanta 2018 sebagai bimbingan dasar pemrograman bagi pemula di bidang pemrograman. Materi yang ada pada *repository* ini terbuka untuk umum dan dapat dipergunakan / dikembangkan / dimodifikasi oleh siapapun selama mencantumkan penulis asli dari masing-masing materi.
+Selamat datang di *repository* GitHub "Dasar-Dasar Pemrograman 0". *Repository* ini digunakan sebagai wadah penyimpanan materi-materi tentang dasar-dasar pemrograman dengan menggunakan bahasa pemrograman Python. Materi yang ada pada *repository* ini disusun sebagai penunjang kegiatan dengan nama serupa yang diadakan oleh Quanta 2018 sebagai bimbingan dasar pemrograman bagi pemula di bidang pemrograman. Materi yang ada pada *repository* ini terbuka untuk umum dan dapat dipergunakan / dikembangkan / dimodifikasi oleh siapapun sesuai Lisensi yang berlaku.
+
+
+
+## Lisensi
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+Materi dan soal yang ditulis pada *repository* ini bebas digunakan oleh dipergunakan / dikembangkan / dimodifikasi oleh siapapun selama mematuhi peraturan yang ada pada lisensi CC-BY-SA 4.0 di atas. 
+
+Atribusi yang dilakukan dapat menggunakan nama "Quanta 2018" sebagai angkatan Fasilkom UI yang menjadi penyelenggara kegiatan ini atau nama penulis masing-masing materi yang terletak pada baris Penulis di setiap halaman.
+
+Pertanyaan lebih lanjut mengenai penggunaan materi ini dapat diajukan ke Rafi Muhammad Daffa (rafi.daffa@gmail.com)
+
+
+
+**Pengecualian**
+
+```
+Copyright © 2001-2019 Python Software Foundation; All Rights Reserved
+```
+
+Penggunaan bahasa pemrograman Python pada materi ini terikat lisensi [*PSF LICENSE AGREEMENT FOR PYTHON 3.7.4*](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release) yang dimiliki oleh Python Software Foundation.
+
+
 
 ## Daftar Isi
 
@@ -40,11 +66,11 @@ Pekan 03. Struktur Kendali II
 
 Pekan 04. Pengenalan Pengecualian
 
-​		3A. Kekeliruan Umum dalam Pemrograman
+​		4A. Kekeliruan Umum dalam Pemrograman
 
-​		3B. Alur Program Luar Biasa
+​		4B. Dokumentasi Program
 
-​		3L. Latihan
+​		4C. *The Zen of Python* (PEP 20)
 
 
 
@@ -64,6 +90,7 @@ Pekan 04. Pengenalan Pengecualian
 Pembuatan *repository* materi ini tidak terlepas dari bantuan sumber-sumber pengajaran yang telah membantu para kontributor dalam menyusunnya.
 
 1. Perkovic, Ljubomir. *Introduction to Computing Using Python: an Application Development Focus*. John Wiley & Sons, Inc., 2015.
-2. Tim Dosen Dasar-Dasar Pemrograman 1 2018/2019-1 Fakultas Ilmu Komputer Universitas Indonesia
-3. Tim Asisten Dosen Dasar-Dasar Pemrograman 1 2018/2019-1 Fakultas Ilmu Komputer Universitas Indonesia
+2. “Python 3.7.4 Documentation.” *3.7.4 Documentation*, Python Software Foundation, docs.python.org/3.
+3. Tim Dosen Dasar-Dasar Pemrograman 1 2018/2019-1 Fakultas Ilmu Komputer Universitas Indonesia
+4. Tim Asisten Dosen Dasar-Dasar Pemrograman 1 2018/2019-1 Fakultas Ilmu Komputer Universitas Indonesia
 

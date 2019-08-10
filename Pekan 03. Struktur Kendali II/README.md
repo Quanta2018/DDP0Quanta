@@ -232,7 +232,7 @@ while angka <= 10:
 
 Program ini mirip dengan yang sebelumnya. Bedanya, pada setiap perulangan yang dilakukan, variabel <code>angka</code> tidak mengalami perubahan. Amatilah hasil program di atas di Python-mu!
 
-> Untuk menghentikan program Python yang sedang berjalan secara paksa, gunakan <code>Ctrl</code> + <code>C</code> untuk Windows/Linux atau <code>Command</code> + <code>C</code> untuk macOS.
+> Untuk menghentikan program Python yang sedang berjalan secara paksa, gunakan <code>Ctrl</code> + <code>C</code>.
 
 Pada proses pemrograman, blok program <code>while</code> harus disusun bersamaan dengan asuransi bahwa program tersebut akan berhenti normal pada waktu tertentu.
 
